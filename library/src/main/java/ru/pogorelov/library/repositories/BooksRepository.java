@@ -7,6 +7,6 @@ import ru.pogorelov.library.models.Book;
 import java.util.List;
 
 @Repository
-public interface BookRepository extends JpaRepository<Book, Integer> {
+public interface BooksRepository extends JpaRepository<Book, Integer> {
     List<Book> findByTitleStartingWith(String title);
 }
