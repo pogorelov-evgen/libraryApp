@@ -3,13 +3,11 @@ package com.example.managerapp.controllers;
 import com.example.managerapp.entity.Product;
 import com.example.managerapp.payload.NewProductPayLoad;
 import com.example.managerapp.service.ProductService;
+import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequiredArgsConstructor
@@ -32,6 +30,7 @@ public class ProductsController {
     @PostMapping("create")
     public String createProduct(NewProductPayLoad payLoad){
         Product product = this.productService.createProduct(payLoad.title(), payLoad.details());
-        return "redirect:/catalogue/products/list";
+        return "redirect:/catalogue/products/%d".formatted(product.getId());
     }
+
 }
