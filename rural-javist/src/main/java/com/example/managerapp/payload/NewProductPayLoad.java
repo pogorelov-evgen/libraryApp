@@ -1,4 +1,12 @@
 package com.example.managerapp.payload;
 
-public record NewProductPayLoad(String title, String details) {
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+
+public record NewProductPayLoad(
+        @NotNull
+        @Size(min = 3, max = 50)
+        String title,
+        @Size(max = 1000)
+        String details) {
 }
