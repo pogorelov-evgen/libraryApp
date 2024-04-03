@@ -1,6 +1,6 @@
-package com.example.managerapp.repository;
+package com.example.catalogueservice.repository;
 
-import com.example.managerapp.entity.Product;
+import com.example.catalogueservice.entity.Product;
 
 import java.util.List;
 import java.util.Optional;

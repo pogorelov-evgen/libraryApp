@@ -4,7 +4,6 @@ import com.example.managerapp.entity.Product;
 import com.example.managerapp.payload.NewProductPayLoad;
 import com.example.managerapp.service.ProductService;
 import jakarta.validation.Valid;
-import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

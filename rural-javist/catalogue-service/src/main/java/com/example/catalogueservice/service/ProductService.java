@@ -1,7 +1,6 @@
-package com.example.managerapp.service;
+package com.example.catalogueservice.service;
 
-import com.example.managerapp.entity.Product;
-
+import com.example.catalogueservice.entity.Product;
 import java.util.List;
 import java.util.Optional;
 
